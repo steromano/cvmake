@@ -570,6 +570,21 @@ First transition from academia to industry. Demonstrates ability to learn quickl
 
 ---
 
+## Postdoctoral Experience
+
+### Postdoctoral Researcher in Mathematical Physics
+**Institution:** Université catholique de Louvain
+**Period:** January 2013 - October 2013 (10 months)
+**Location:** Louvain-la-Neuve, Belgium
+
+**Context:**
+By end of PhD was already skeptical about academic career (lacked raw motivation, lifestyle implications). Postdoc was offered, decided to give it a try as had no other option at time. Within few months confirmed it wasn't right path. Started preparing for industry transition (self-taught data science through Coursera courses). This bridge period led directly to first industry role at Gamesys in October 2013.
+
+**Why This Matters:**
+Shows the deliberate transition from academia to industry. The brief postdoc confirmed career direction and motivated self-teaching data science fundamentals.
+
+---
+
 ---
 
 ## Career Narrative Notes

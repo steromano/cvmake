@@ -1,17 +1,17 @@
 # Personal Information
 # Fill in your details here - this will be used across all generated CVs and cover letters
 
-name: ""
-title: ""  # e.g., "Software Engineer", "Data Scientist"
+name: "Stefano Romano"
+title: "Experienced Data and Product Leader"  # Default - customize per application
 
 contact:
-  email: ""
-  phone: ""
-  location: ""  # e.g., "London, UK" or "Remote"
+  email: "ste.romano83@gmail.com"
+  phone: "+61 490 505 424"
+  location: "Sydney, Australia"  # Currently - adjust as needed
 
 links:
-  linkedin: ""
-  github: ""
+  linkedin: "linkedin.com/in/steromano"
+  github: ""  # Add if relevant
   website: ""
   portfolio: ""
   # Add any other relevant links
@@ -19,4 +19,4 @@ links:
 summary:
   # A brief professional summary (1-2 sentences)
   # This can be customized per application, but having a default is useful
-  default: ""
+  default: "Product-minded data leader with 10+ years of experience in both startups and big tech. I combine a PhD-level scientific background with full-stack expertise across data engineering, data science and analytics. My core strength is in building high-performing data teams from the ground up, but in recent roles I expanded into technical product management of data/AI-centric applications."
