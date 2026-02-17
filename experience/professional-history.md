@@ -366,7 +366,209 @@ Angelico Fetta (Senior Engineering Manager) - linkedin.com/in/angelicofetta
 
 ---
 
-### [Continue with next role - Individual Contributor roles...]
+## Individual Contributor Roles - Data Scientist
+
+### Improbable
+**Role:** Data Scientist (Technical Lead)
+**Period:** July 2018 - February 2020 (1 year 8 months)
+**Location:** London, UK
+**Industry:** Enterprise Technology, Simulation, Government/Defense
+**Reporting:** [Applied Science leadership]
+
+**Context & Scope:**
+Senior IC and technical lead for scientific modeling team (5-6 people). Often owned model design for core components of projects. Mentored junior team members. Improbable's premise: build digital twins of complex systems by connecting multiple domain-specific models and leveraging gaming-inspired runtime to run simulations at scale. Worked on projects for private sector and government customers. Company's largest and most serious projects came when focused on MoD as main customer.
+
+**Key Responsibilities:**
+- Designed and implemented multi-domain simulations for government and private sector customers
+- Technical lead role: spanning literature review, custom model design, and implementation
+- Applied wide range of modeling techniques: probabilistic programming, unsupervised learning, procedural generation, network science
+- All modeling entirely custom - no off-the-shelf solutions
+
+**Major Projects:**
+
+1. **MoD Operational Decision Support Tool (Largest/Most Serious Project)**
+   - **Purpose:** Mission preparation and rehearsal for UK Ministry of Defence
+   - **Scope:** Ingest data from multiple sources, spin up digital twin of target area at multiple resolutions:
+     - *Strategic level:* Entire region or nation - understand political sentiment, population distribution, critical infrastructure
+     - *Tactical level:* Specific part of city, down to individual buildings and people, with FPS-style interaction capability
+   - **Technical Approach:**
+     - Literature review of existing modeling approaches (e.g., synthetic population generation from census data, procedural generation of realistic power grids)
+     - Design custom models for specific purpose
+     - Implement using blend of techniques
+   - **Challenge:** Spanning enormous range of scales and modeling techniques in single coherent system
+
+2. **Oil Price Differential Prediction (Private Sector)**
+   - Predicting oil price differentials based on pipeline status and logistics
+   - Digital twin of logistics infrastructure
+
+3. **Power Grid Impact of EV Diffusion (Private Sector)**
+   - Predicting impact on power grid from electric vehicle adoption
+   - Network modeling combined with adoption diffusion models
+
+**Modeling Techniques Applied:**
+- **Probabilistic Programming:** Company was building own open-source PPL. High literacy on PPL across company. Common approach: take existing "model" from customer (typically spreadsheet) and translate into graphical model with proper handling of uncertainty. Example: Oil & Gas customer wanting to understand oil price differentials - translated their spreadsheet into proper probabilistic model. Even this basic first pass was often quite valuable for customers.
+- **Procedural Generation:** Generating realistic infrastructure (power grids, road networks) from limited data
+- **Network Science:** Modeling interconnected systems (logistics, power grids, population flows)
+- **Synthetic Population Generation:** Creating realistic populations from census data
+- **Agent-Based Modeling:** Individual-level behavior in simulations
+
+**Technical Environment / Tools Used:**
+Python, R, Julia, Luigi (workflow orchestration), Improbable's gaming-inspired runtime
+
+**Skills Developed/Applied:**
+- Technical: Multi-domain modeling, digital twins, procedural generation, network science, probabilistic programming, custom model design
+- Research: Literature review, translating academic methods to production systems
+- Domain: Government/defense, logistics, energy systems, urban systems
+- Soft skills: Customer-facing technical work, translating requirements to models
+
+**Transition to Management (Feb 2020):**
+Moved to managing Research Science team when company refocused on national defense and security market. Was interested in trying management at the time - had been enjoying mentorship aspect of IC role and wanted to continue growing. This was my first people management role.
+
+**Why This Experience Matters:**
+Demonstrates ability to work on cutting-edge simulation technology, span multiple technical domains, design custom solutions (not just apply existing tools), and deliver for high-stakes government customers. The multi-resolution digital twin work (strategic to tactical) shows ability to think across scales and integrate complex systems.
+
+---
+
+### Facebook
+**Role:** Data Scientist
+**Period:** August 2016 - June 2018 (1 year 11 months)
+**Location:** London, UK
+**Industry:** Big Tech, Advertising Technology
+**Reporting:** Engineering Manager (cross-functional team with PM, EM, engineers, DS)
+
+**Context & Scope:**
+Embedded in cross-functional product team building "Store Visits" - a measurement tool for offline advertisers. Tagline: "Pixel for offline conversions." Product used background location data from phones to estimate visits to physical stores and link back to ad exposure in Facebook app. Customers were mostly large retailers (e.g., Walmart).
+
+**The Technical Challenge:**
+Small fraction of FB users have background location enabled (location ping every few minutes: GPS coordinates, bluetooth signatures, etc.). Two challenges: (1) Determine if person visited given store (complicated by: visiting vs in transit? GPS accuracy ~30m depending on density, lots of uncertainty), (2) Only have sample with location enabled → need to upscale to entire FB user population, accounting for bias in sample.
+
+**The Complex Pipeline (Chain of Models):**
+1. Segment location pings into: at home / at work / in transit / visiting
+2. For "visiting": fetch candidate stores nearby
+3. Score each candidate
+4. Calibrate scores to visit probabilities
+5. For each store: sum probabilities → expected number of visits
+6. Upscale to all FB users
+
+Each step used different modeling methods, had different sources of ground truth, and different types of errors.
+
+**Key Responsibilities:**
+- Standard product DS work: authority on product health, define key team metrics, set goals
+- Design and evaluate core statistical estimation pipeline
+- Understand error propagation through entire pipeline
+- Develop corrections where appropriate
+- Estimate error bars for specific estimates (given business type and location)
+- **Eligibility framework:** Decide whether to give product access to advertisers based on estimated margin of error
+
+**Major Achievement - Eligibility Framework:**
+Built framework to estimate error bars for store visit estimates given business type and location. Used this to make eligibility decisions: if margin of error low enough that advertisers could conceivably use it to measure ad campaign impact → grant access. This directly contributed to product itself (slightly unusual for DS role at the time, which was typically pure analytics).
+
+**Technical Environment / Tools Used:**
+SQL, Python, Airflow (workflow orchestration), Facebook's internal data infrastructure
+
+**Skills Developed/Applied:**
+- Technical: Error propagation analysis, statistical estimation pipelines, upscaling/calibration, geolocation data, multi-stage modeling, uncertainty quantification
+- Product: Product analytics, metrics definition, cross-functional collaboration, product contribution
+- Domain: Advertising measurement, offline conversion tracking, large-scale data systems
+- Soft skills: Working with PM/EM, communicating uncertainty to non-technical stakeholders
+
+**Why This Role Was Different:**
+Most DS roles at FB at the time were effectively product analyst roles. I did that plus the eligibility work which was more like contributing directly to product itself. Worked closely with PM and EM in cross-functional team.
+
+**Why Leave After 2 Years:**
+Strongly wanted to try a startup. Learned a ton at FB but realized success there required navigating org, maintaining situational awareness across company, and building strong network. I was bad at these things and had no interest in them. Naturally drawn to smaller companies.
+
+**Why This Experience Matters:**
+Demonstrates ability to work with uncertainty at scale, design complex multi-stage statistical systems, operate in big tech environment, and contribute to product development beyond pure analytics. The error propagation and eligibility framework work shows sophisticated statistical thinking applied to practical product problems.
+
+---
+
+### YouGov
+**Role:** Data Scientist
+**Period:** May 2015 - July 2016 (1 year 3 months)
+**Location:** London, UK
+**Industry:** Market Research, Data/Analytics
+
+**Context & Scope:**
+Part of Centre of Statistical Excellence team (~5 people). YouGov was fairly traditional market research company with more tech spin than most. Team responsible for data engineering powering core product "Profiles" (aggregated data from surveys and other sources - represented ~1/3 of business, rest was traditional custom research). Also occasionally jumped into customer projects for analysis, visualization, or math support.
+
+**Key Responsibilities:**
+- Data engineering for Profiles product (data aggregation from multiple sources)
+- Ad-hoc advanced analytics for custom research projects
+- Prototyping new data products
+- Supporting researchers with specialized analysis
+
+**Notable Project - Brand Sentiment Anomaly Detection Tool:**
+- Proactive innovation project
+- Built prototype for identifying anomalies in brand perception data
+- Showed internally with good feedback
+- Ended up being used internally by researchers to identify anomalies in brand perception and flag them to customers
+- Example of prototyping → internal adoption
+
+**Technical Environment / Tools Used:**
+Python, R, AWS Redshift (data warehouse), SQL, Luigi (Spotify DAG framework - somewhat new at time) for pipeline orchestration
+
+**Skills Developed/Applied:**
+- Technical: Data engineering, pipeline orchestration (Luigi/DAGs), anomaly detection, data aggregation, AWS/Redshift
+- Product: Prototyping, internal product development
+- Domain: Market research, brand tracking, survey data
+- Soft skills: Supporting researchers, translating technical work for non-technical stakeholders
+
+**Why Leave After 14 Months:**
+Wanted to work in tech-first environment. Facebook seemed like great learning opportunity.
+
+---
+
+### Gamesys
+**Role:** Data Scientist
+**Period:** October 2013 - May 2015 (1 year 8 months)
+**Location:** London, UK
+**Industry:** Gaming/iGaming
+
+**Context & Scope:**
+First industry job after leaving academia. Transition was hard - academic background entirely theoretical (pen & paper physics), could barely use computer, didn't understand business. Applied to lots of finance/tech roles but lacked basic skills most graduates have.
+
+**How I Got This Role (2 Key Factors):**
+1. **Team valued PhD background:** Nerdy team appreciated theoretical/academic rigor
+2. **Professional poker background:** Played online poker at professional level throughout PhD (midstakes 200NL-400NL for 3 years, averaged ~$100/hour). Relatively well known in Italian poker community, did coaching and live tournament finishes. Strongly considered poker as career but felt too short term, wanted to finish PhD. **Gamesys valued this highly** - company did only gambling, was developing poker product, valued my sector experience. (Note: No longer typically include poker on CV, but was crucial for this role)
+
+**Key Responsibilities:**
+- Player behavior modeling to predict retention and lifetime value
+- Applied basic ML modeling (learning on the job)
+- Tech stack: R, Python, SQL
+
+**The Learning Curve:**
+- Learned "a lot very quickly" (was told by team)
+- Picked up SQL, R, Python in first few months
+- Played around with basic ML modeling
+- Did NOT understand business or have interest in big picture at this stage - came much later in career
+- Early career mindset: still academic, driven by solving technical problems and becoming better at craft (why did all those Coursera courses in 2013-2014)
+
+**What Transferred from Physics:**
+- Some basic math literacy
+- **Most importantly: Attitude towards learning** - habit of learning hard things that require resiliency and focus
+- But in terms of specific skills: not much transferred directly
+
+**Technical Environment / Tools Used:**
+R, Python, SQL
+
+**Skills Developed/Applied:**
+- Technical: SQL, R, Python (learned from scratch), basic ML, retention modeling, LTV prediction
+- Domain: Gaming/iGaming, player behavior, poker
+- Soft skills: Learning quickly, transitioning from academia to industry
+- From poker background: Probabilistic thinking, risk assessment, competitive/performance-driven mindset
+
+**Why Leave After 18 Months:**
+- Company fairly unsophisticated from data science perspective
+- Old tech stack (Cognos, DB2)
+- Had learned what I could, ready for next challenge
+- Compensation was poor (in retrospect)
+- Didn't love the industry - despite poker background, never been fan of casinos and gambling culture (company had a lot of this)
+
+**Why This Experience Matters:**
+First transition from academia to industry. Demonstrates ability to learn quickly and pick up entirely new skill sets. The poker background (though not typically on CV) shows probabilistic thinking and sector-specific domain knowledge that can be relevant for gaming, risk, trading, or analytics roles.
+
+---
 
 ---
 
