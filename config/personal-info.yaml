@@ -1,0 +1,22 @@
+# Personal Information
+# Fill in your details here - this will be used across all generated CVs and cover letters
+
+name: ""
+title: ""  # e.g., "Software Engineer", "Data Scientist"
+
+contact:
+  email: ""
+  phone: ""
+  location: ""  # e.g., "London, UK" or "Remote"
+
+links:
+  linkedin: ""
+  github: ""
+  website: ""
+  portfolio: ""
+  # Add any other relevant links
+
+summary:
+  # A brief professional summary (1-2 sentences)
+  # This can be customized per application, but having a default is useful
+  default: ""

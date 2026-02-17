@@ -1,0 +1,75 @@
+% Standard Cover Letter Template
+
+\documentclass[11pt,a4paper]{letter}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{parskip}
+
+% Page setup
+\geometry{left=2.5cm, right=2.5cm, top=2cm, bottom=2cm}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Signature spacing
+\longindentation=0pt
+
+% Sender address
+\address{
+    {{YOUR_NAME}} \\
+    {{YOUR_ADDRESS_LINE_1}} \\
+    {{YOUR_ADDRESS_LINE_2}} \\
+    {{YOUR_EMAIL}} \\
+    {{YOUR_PHONE}}
+}
+
+\begin{document}
+
+% Recipient address
+\begin{letter}{
+    {{RECIPIENT_NAME}} \\
+    {{RECIPIENT_TITLE}} \\
+    {{COMPANY_NAME}} \\
+    {{COMPANY_ADDRESS_LINE_1}} \\
+    {{COMPANY_ADDRESS_LINE_2}}
+}
+
+% Opening
+\opening{Dear {{RECIPIENT_NAME}},}
+
+% Body paragraphs
+
+% Paragraph 1: Introduction and position
+{{PARA_1_INTRODUCTION}}
+
+% Paragraph 2: Why you're a great fit (highlight relevant experience)
+{{PARA_2_QUALIFICATIONS}}
+
+% Paragraph 3: Why this company/role (show you've done research)
+{{PARA_3_COMPANY_FIT}}
+
+% Paragraph 4: Closing and call to action
+{{PARA_4_CLOSING}}
+
+% Closing
+\closing{Sincerely,}
+
+% Signature (leave space for handwritten signature if printing)
+% \fromsig{\includegraphics[height=2cm]{signature.png}} % Uncomment if using image
+\fromname{{{YOUR_NAME}}}
+
+\end{letter}
+
+\end{document}

@@ -1,0 +1,28 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Generated PDFs (optional - you may want to track these)
+# *.pdf
+
+# macOS
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.obsidian/
+
+# Claude Code local settings
+.claude/
+
+# Temporary files
+*.tmp

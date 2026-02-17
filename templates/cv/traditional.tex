@@ -1,0 +1,132 @@
+% Traditional CV Template
+% Conservative, professional design suitable for traditional industries
+
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{parskip}
+
+% Page setup
+\geometry{left=2.5cm, right=2.5cm, top=2cm, bottom=2cm}
+\pagestyle{empty}
+
+% Section formatting
+\titleformat{\section}
+  {\large\bfseries}
+  {}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+    pdftitle={CV - {{NAME}}},
+    pdfauthor={{NAME}}
+}
+
+% Custom commands
+\newcommand{\cvheader}[5]{
+    \begin{center}
+        {\LARGE\bfseries #1} \\[6pt]
+        {\normalsize #2} \\[8pt]
+        #3 $\vert$ #4 $\vert$ #5
+    \end{center}
+    \vspace{8pt}
+}
+
+\newcommand{\cvlinks}[3]{
+    \begin{center}
+        \ifx&#1&\else LinkedIn: \href{#1}{#1} \quad\fi
+        \ifx&#2&\else GitHub: \href{#2}{#2} \quad\fi
+        \ifx&#3&\else #3\fi
+    \end{center}
+    \vspace{5pt}
+}
+
+\newcommand{\cventry}[5]{
+    \noindent
+    \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill #4 \\[4pt]
+    #5
+    \vspace{10pt}
+}
+
+\newcommand{\cveducation}[5]{
+    \noindent
+    \textbf{#1} \hfill #2 \\
+    #3 \hfill #4 \\[4pt]
+    #5
+    \vspace{10pt}
+}
+
+\begin{document}
+
+% Header
+\cvheader
+    {{NAME}}
+    {{TITLE}}
+    {{EMAIL}}
+    {{PHONE}}
+    {{LOCATION}}
+
+% Links
+\cvlinks
+    {{LINKEDIN}}
+    {{GITHUB}}
+    {{WEBSITE}}
+
+% Professional Summary
+\section*{Professional Summary}
+{{SUMMARY}}
+
+% Professional Experience
+\section*{Professional Experience}
+
+\cventry
+    {{JOB_TITLE}}
+    {{DATE_RANGE}}
+    {{COMPANY}}
+    {{LOCATION}}
+    {
+    \begin{itemize}[leftmargin=*, itemsep=2pt, parsep=0pt]
+        \item {{ACHIEVEMENT_1}}
+        \item {{ACHIEVEMENT_2}}
+        \item {{ACHIEVEMENT_3}}
+    \end{itemize}
+    }
+
+% Repeat cventry for each position
+
+% Education
+\section*{Education}
+
+\cveducation
+    {{DEGREE}}
+    {{GRADUATION_DATE}}
+    {{INSTITUTION}}
+    {{LOCATION}}
+    {{{DETAILS}}}
+
+% Professional Skills
+\section*{Professional Skills}
+
+\noindent
+\textbf{{{SKILL_CATEGORY_1}}:} {{SKILLS_LIST_1}}
+
+\noindent
+\textbf{{{SKILL_CATEGORY_2}}:} {{SKILLS_LIST_2}}
+
+% Additional sections as needed
+% \section*{Publications}
+% \section*{Professional Memberships}
+% \section*{References}
+% Available upon request
+
+\end{document}

@@ -1,0 +1,161 @@
+% Technical CV Template
+% Optimized for software engineering, data science, and tech roles
+
+\documentclass[10pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage{multicol}
+
+% Page setup
+\geometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm}
+\pagestyle{empty}
+
+% Colors
+\definecolor{techblue}{RGB}{51, 102, 153}
+\definecolor{codegray}{RGB}{85, 85, 85}
+
+% Section formatting
+\titleformat{\section}
+  {\large\bfseries\color{techblue}}
+  {}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{codegray}}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=techblue,
+    urlcolor=techblue,
+    pdftitle={CV - {{NAME}}},
+    pdfauthor={{NAME}}
+}
+
+% Custom commands
+\newcommand{\cvheader}[5]{
+    \begin{center}
+        {\LARGE\bfseries\color{codegray} #1} \\[3pt]
+        {\normalsize\color{techblue} #2} \\[6pt]
+        {\small
+        \faEnvelope\ \href{mailto:#3}{#3} \quad
+        \faPhone\ #4 \quad
+        \faMapMarker\ #5}
+    \end{center}
+    \vspace{3pt}
+}
+
+\newcommand{\cvlinks}[4]{
+    \begin{center}
+        {\small
+        \ifx&#1&\else\faLinkedin\ \href{#1}{#1} \quad\fi
+        \ifx&#2&\else\faGithub\ \href{#2}{#2} \quad\fi
+        \ifx&#3&\else\faGlobe\ \href{#3}{#3} \quad\fi
+        #4}
+    \end{center}
+    \vspace{3pt}
+}
+
+\newcommand{\cventry}[5]{
+    \textbf{#1} \hfill {\small\color{codegray} #2} \\
+    {\color{techblue}\textit{#3}} \hfill {\small\color{codegray} #4} \\
+    #5
+    \vspace{6pt}
+}
+
+\newcommand{\cvproject}[4]{
+    \textbf{#1} \hfill {\small\color{codegray} #2} \\
+    {\small\textit{Tech: #3}} \\
+    #4
+    \vspace{4pt}
+}
+
+\newcommand{\skillgroup}[2]{
+    \textbf{#1:} #2
+    \vspace{2pt}
+}
+
+\begin{document}
+
+% Header
+\cvheader
+    {{NAME}}
+    {{TITLE}}
+    {{EMAIL}}
+    {{PHONE}}
+    {{LOCATION}}
+
+% Links
+\cvlinks
+    {{LINKEDIN}}
+    {{GITHUB}}
+    {{WEBSITE}}
+    {{ADDITIONAL_LINKS}}
+
+% Technical Skills (placed early for tech roles)
+\section*{Technical Skills}
+
+\skillgroup{{{SKILL_CATEGORY_1}}}{{{SKILLS_LIST_1}}}
+
+\skillgroup{{{SKILL_CATEGORY_2}}}{{{SKILLS_LIST_2}}}
+
+\skillgroup{{{SKILL_CATEGORY_3}}}{{{SKILLS_LIST_3}}}
+
+% Professional Experience
+\section*{Experience}
+
+\cventry
+    {{JOB_TITLE}}
+    {{DATE_RANGE}}
+    {{COMPANY}}
+    {{LOCATION}}
+    {
+    \begin{itemize}[leftmargin=*, itemsep=1pt, parsep=0pt, topsep=2pt]
+        \item {{ACHIEVEMENT_1}}
+        \item {{ACHIEVEMENT_2}}
+        \item {{ACHIEVEMENT_3}}
+    \end{itemize}
+    \textit{Technologies:} {{TECH_STACK}}
+    }
+
+% Repeat cventry for each position
+
+% Projects (important for technical roles)
+\section*{Notable Projects}
+
+\cvproject
+    {{PROJECT_NAME}}
+    {{DATE}}
+    {{TECH_STACK}}
+    {
+    \begin{itemize}[leftmargin=*, itemsep=1pt, parsep=0pt, topsep=2pt]
+        \item {{PROJECT_DETAIL_1}}
+        \item {{PROJECT_DETAIL_2}}
+    \end{itemize}
+    }
+
+% Education
+\section*{Education}
+
+\noindent
+\textbf{{{DEGREE}}} \hfill {\small\color{codegray} {{GRADUATION_DATE}}} \\
+{{INSTITUTION}} \hfill {\small\color{codegray} {{LOCATION}}}
+
+% Optional sections
+% \section*{Open Source Contributions}
+% \section*{Publications \& Talks}
+% \section*{Certifications}
+
+\end{document}

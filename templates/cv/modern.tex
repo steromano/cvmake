@@ -1,0 +1,146 @@
+% Modern CV Template
+% Clean, contemporary design with accent colors and clear section breaks
+
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{lmodern}
+\usepackage{parskip}
+
+% Page setup
+\geometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm}
+\pagestyle{empty}
+
+% Colors
+\definecolor{accentcolor}{RGB}{0, 102, 204}
+\definecolor{darkgray}{RGB}{64, 64, 64}
+
+% Section formatting
+\titleformat{\section}
+  {\Large\bfseries\color{accentcolor}}
+  {}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accentcolor,
+    urlcolor=accentcolor,
+    pdftitle={CV - {{NAME}}},
+    pdfauthor={{NAME}}
+}
+
+% Custom commands
+\newcommand{\cvheader}[5]{
+    \begin{center}
+        {\Huge\bfseries\color{darkgray} #1} \\[5pt]
+        {\large\color{accentcolor} #2} \\[8pt]
+        {\small
+        \faEnvelope\ \href{mailto:#3}{#3} \quad
+        \faPhone\ #4 \quad
+        \faMapMarker\ #5}
+    \end{center}
+    \vspace{5pt}
+}
+
+\newcommand{\cvlinks}[4]{
+    \begin{center}
+        {\small
+        \ifx&#1&\else\faLinkedin\ \href{#1}{LinkedIn} \quad\fi
+        \ifx&#2&\else\faGithub\ \href{#2}{GitHub} \quad\fi
+        \ifx&#3&\else\faGlobe\ \href{#3}{Website} \quad\fi
+        #4}
+    \end{center}
+    \vspace{5pt}
+}
+
+\newcommand{\cventry}[5]{
+    \textbf{#1} \hfill {\small\color{darkgray} #2} \\
+    {\color{accentcolor}\textit{#3}} \hfill {\small\color{darkgray} #4} \\
+    #5
+    \vspace{8pt}
+}
+
+\newcommand{\cveducation}[5]{
+    \textbf{#1} \hfill {\small\color{darkgray} #2} \\
+    {\textit{#3}} \hfill {\small\color{darkgray} #4} \\
+    #5
+    \vspace{8pt}
+}
+
+\newcommand{\cvproject}[3]{
+    \textbf{#1} \hfill {\small\color{darkgray} #2} \\
+    #3
+    \vspace{6pt}
+}
+
+\begin{document}
+
+% Header
+\cvheader
+    {{NAME}}
+    {{TITLE}}
+    {{EMAIL}}
+    {{PHONE}}
+    {{LOCATION}}
+
+% Links
+\cvlinks
+    {{LINKEDIN}}
+    {{GITHUB}}
+    {{WEBSITE}}
+    {{ADDITIONAL_LINKS}}
+
+% Summary (optional)
+\section*{Professional Summary}
+{{SUMMARY}}
+
+% Experience
+\section*{Professional Experience}
+
+\cventry
+    {{JOB_TITLE}}
+    {{DATE_RANGE}}
+    {{COMPANY}}
+    {{LOCATION}}
+    {
+    \begin{itemize}[leftmargin=*, itemsep=1pt, parsep=0pt]
+        \item {{ACHIEVEMENT_1}}
+        \item {{ACHIEVEMENT_2}}
+        \item {{ACHIEVEMENT_3}}
+    \end{itemize}
+    }
+
+% Repeat cventry for each position
+
+% Education
+\section*{Education}
+
+\cveducation
+    {{DEGREE}}
+    {{GRADUATION_DATE}}
+    {{INSTITUTION}}
+    {{LOCATION}}
+    {{{DETAILS}}}
+
+% Skills
+\section*{Skills}
+
+\textbf{{{SKILL_CATEGORY_1}}:} {{SKILLS_LIST_1}}
+
+\textbf{{{SKILL_CATEGORY_2}}:} {{SKILLS_LIST_2}}
+
+% Additional sections as needed
+% \section*{Publications}
+% \section*{Projects}
+% \section*{Certifications}
+
+\end{document}
