@@ -1,0 +1,166 @@
+% Product Manager CV - Early Stage Startups
+% Modern template optimized for startup PM roles
+
+\documentclass[10pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{lmodern}
+\usepackage{parskip}
+
+% Page setup
+\geometry{left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm}
+\pagestyle{empty}
+
+% Colors
+\definecolor{accentcolor}{RGB}{0, 102, 204}
+\definecolor{darkgray}{RGB}{64, 64, 64}
+
+% Section formatting
+\titleformat{\section}
+  {\Large\bfseries\color{accentcolor}}
+  {}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accentcolor,
+    urlcolor=accentcolor,
+    pdftitle={CV - Stefano Romano - Product Manager},
+    pdfauthor={Stefano Romano}
+}
+
+% Custom commands
+\newcommand{\cventry}[5]{
+    \textbf{#1} \hfill {\small\color{darkgray} #2} \\
+    {\color{accentcolor}\textit{#3}} \hfill {\small\color{darkgray} #4} \\
+    #5
+    \vspace{6pt}
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge\bfseries\color{darkgray} Stefano Romano} \\[5pt]
+    {\large\color{accentcolor} Product-Minded Technical Leader} \\[8pt]
+    {\small
+    \faEnvelope\ \href{mailto:ste.romano83@gmail.com}{ste.romano83@gmail.com} \quad
+    \faPhone\ +61 490 505 424 \quad
+    \faMapMarker\ Sydney, Australia}
+\end{center}
+\vspace{3pt}
+
+\begin{center}
+    {\small
+    \faLinkedin\ \href{https://linkedin.com/in/steromano}{linkedin.com/in/steromano}}
+\end{center}
+\vspace{3pt}
+
+% Summary
+\section*{Professional Summary}
+Technical product leader with 10+ years building data and AI products in early-stage startups. I combine deep technical expertise with product strategy and customer-facing work. Recently transitioned from data leadership to product management, currently leading AI product strategy at a Series A startup. I thrive in 0-to-1 environments where ambiguity is high and wearing multiple hats is required. My superpower is translating complex technical capabilities into customer value.
+
+% Experience
+\section*{Experience}
+
+\cventry
+    {Technical Product Manager \& Senior Manager, Data}
+    {Nov 2024 - Present}
+    {Dovetail (Series A AI/Customer Intelligence Platform)}
+    {Sydney, AU}
+    {
+    \begin{itemize}[leftmargin=*, itemsep=1pt, parsep=0pt, topsep=2pt]
+        \item \textbf{Leading AI Product Strategy:} Currently driving product strategy/discovery project with CEO to define Dovetail's future in the AI era. Responsible for identifying strategic bets and radical product adjustments needed for competitive positioning
+        \item \textbf{Technical PM for Core Product:} Manage data backend for Dovetail's AI features (Chat, Agents, Search, AI Docs). Report directly to CEO. Own data ingestion and AI analysis pipelines
+        \item \textbf{GTM Efficiency Analysis:} Led cross-functional investigation that revealed \$M marketing investment wasn't working. Built custom attribution logic across systems. Analysis directly contributed to CEO decision to restructure company for profitability
+        \item \textbf{Data Platform Turnaround:} Rebuilt entire data infrastructure achieving 70\% cost savings. Personally rewrote dbt pipeline (40\% fewer models). Migrated Postgres→Snowflake, implemented semantic layer, modernized stack
+    \end{itemize}
+    \textit{Impact:} Expanded from pure data role to 80\% product within 1 year. Trusted partner to CEO on strategy.
+    }
+
+\cventry
+    {Product Manager - Data, Analytics \& Integrations}
+    {Feb - Nov 2024}
+    {Sequence (a16z-backed Billing Infrastructure Startup)}
+    {Auckland, NZ}
+    {
+    \begin{itemize}[leftmargin=*, itemsep=1pt, parsep=0pt, topsep=2pt]
+        \item \textbf{Unlocked 3 Trajectory-Changing Deals:} Customer-facing technical expert for complex enterprise sales. Notable: worked with incident.io (now Sequence's largest customer, contract grew 10x) on reporting and revenue recognition requirements. Drove technical clarity that closed deals
+        \item \textbf{Shipped Core Product Features:} (1) Usage-based pricing infrastructure (events, metrics, pricing models), (2) Salesforce 2-way sync integration (designed data model, workflows, worked with external agency), (3) Revenue recognition module (fully specced, created technical design, worked with design on mockups)
+        \item \textbf{AI Strategy:} Advised leadership and investors on AI strategy. Subject matter expert on model capabilities. Evangelized AI tools internally. Helped refine AI features (contract PDF parsing)
+    \end{itemize}
+    \textit{Impact:} Multi-disciplinary lead across product, data, engineering. Operated at intersection of technical depth and customer value.
+    }
+
+\cventry
+    {Director of Data Engineering}
+    {Nov 2021 - Feb 2024}
+    {Sequence}
+    {Auckland, NZ}
+    {
+    \begin{itemize}[leftmargin=*, itemsep=1pt, parsep=0pt, topsep=2pt]
+        \item \textbf{Early Hire - Built Data Function 0-to-1:} Joined as ~5th employee. Set up entire data stack (dbt, BigQuery, Metabase), designed architecture, built core pipelines. Hired small data team (later rightsized as company found traction)
+        \item \textbf{Leadership Team Member:} Part of 5-person leadership team involved in all aspects of company building: hiring strategy, GTM, go-to-market, culture. Contributed beyond functional area
+        \item \textbf{Customer-Facing Data Products:} Built data export feature (via Prequel) enabling customer revenue reporting. Created Google Sheets templates for ARR reporting, usage analytics, sales commissions. Pragmatic solutions that unblocked deals
+    \end{itemize}
+    \textit{Tech:} GCP, Python, dbt, BigQuery, Postgres, Metabase
+    }
+
+\cventry
+    {Data Scientist (Technical Lead)}
+    {Jul 2018 - Feb 2020}
+    {Improbable (Government/Defense Simulations)}
+    {London, UK}
+    {
+    \begin{itemize}[leftmargin=*, itemsep=1pt, parsep=0pt, topsep=2pt]
+        \item \textbf{MoD Operational Decision Support Tool:} Technical lead for UK Ministry of Defence project building digital twin for mission preparation. Multi-resolution system spanning strategic (nation-level) to tactical (FPS-level individual buildings/people)
+        \item \textbf{Custom Model Design:} Owned model design for core project components. Span wide range of techniques: probabilistic programming, procedural generation, network science. All modeling custom-built for specific use cases
+        \item Senior IC leading team of 5-6. Mentored junior researchers and engineers
+    \end{itemize}
+    }
+
+\cventry
+    {Data Scientist}
+    {Aug 2016 - Jun 2018}
+    {Facebook}
+    {London, UK}
+    {
+    \begin{itemize}[leftmargin=*, itemsep=1pt, parsep=0pt, topsep=2pt]
+        \item \textbf{"Store Visits" Product:} Embedded in product team building offline advertising measurement tool for retailers (e.g., Walmart). Used geolocation data + ML to estimate ad impact on physical store visits
+        \item \textbf{Built Eligibility Framework:} Designed statistical estimation pipeline with error propagation analysis. Created framework to decide advertiser eligibility based on margin of error. Directly contributed to product (unusual for DS role)
+        \item Cross-functional team: worked closely with PM and EM on product strategy and execution
+    \end{itemize}
+    }
+
+% Skills
+\section*{Skills}
+
+\textbf{Product:} Product strategy, customer discovery, technical product management, 0-to-1 product development, roadmap prioritization, stakeholder alignment
+
+\textbf{Technical:} Data architecture, modern data stack (dbt, Snowflake, BigQuery), ML/AI, statistical modeling, Python, SQL, API design
+
+\textbf{Leadership:} Early-stage company building, cross-functional collaboration, hiring, customer-facing technical work
+
+\textbf{Domain:} B2B SaaS, AI products, data/analytics products, fintech, billing infrastructure
+
+% Education
+\section*{Education}
+
+\noindent
+\textbf{Ph.D. in Mathematical Physics} \hfill {\small\color{darkgray} 2008-2012} \\
+SISSA (International School of Advanced Studies), Trieste, Italy
+
+\noindent
+\textbf{Master's in Theoretical Physics} (110/110 cum laude) \hfill {\small\color{darkgray} 2005-2008} \\
+Università di Pavia, Italy
+
+\end{document}
