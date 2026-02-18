@@ -48,9 +48,6 @@ cvmake/
 │   └── cover-letter/
 │       └── standard.tex        # Cover letter template
 │
-├── manual/                      # Reference materials
-│   └── [existing CVs, etc.]
-│
 └── private/                     # Git submodule (private repo)
     ├── config/                  # Personal configuration
     │   ├── personal-info.yaml  # Contact details, links
@@ -62,11 +59,13 @@ cvmake/
     │   ├── skills.md
     │   └── achievements.md
     │
-    └── generated/               # Generated CVs and cover letters
-        ├── baseline/            # Example CVs
-        │   └── [target-role-name]/
-        └── applications/        # Job-specific CVs
-            └── [company-role-date]/
+    ├── generated/               # Generated CVs and cover letters
+    │   ├── baseline/            # Example CVs
+    │   │   └── [target-role-name]/
+    │   └── applications/        # Job-specific CVs
+    │       └── [company-role-date]/
+    │
+    └── manual/                  # Reference materials (existing CVs, etc.)
 ```
 
 **Note:** The `private/` folder is a git submodule pointing to a separate private repository. This keeps personal data (professional history, generated CVs) private while the project framework remains public.
