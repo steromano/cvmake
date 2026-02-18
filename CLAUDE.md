@@ -40,24 +40,6 @@ This project helps generate tailored resumes and cover letters for specific role
 - Suggest workflow improvements as opportunities arise
 - Balance project work with learning new capabilities
 
-## CV Style Preferences
+## Personal Preferences
 
-### Content & Tone
-- **Include all roles**: Even early career positions should appear, though they can be condensed
-- **Group early career roles**: Combine early IC roles into a single "Early Career" block with brief bullet points per company
-- **Plain, factual language**: Avoid hypey words like "superpower", "excellence", "cutting-edge", "best-in-class"
-- **Tone down self-promotion**: Phrases like "Shipped core product features" or "hiring excellence" feel over-the-top; prefer more neutral descriptions
-- **Headlines describe areas, not metrics**: Keep impact metrics (% savings, # deals) in the body text, not in bold headlines. Headlines should describe the area of work (e.g., "Data Platform" not "Data Platform Rebuild - 70% Cost Savings")
-
-### Formatting (LaTeX)
-- **Tight but readable spacing**: Reduce whitespace between job header (title + subtitle) and bullet points, but not so tight they overlap
-- **No orphaned headers**: Job headers must stay on the same page as their bullet points (use `\begin{minipage}{\textwidth}...\end{minipage}`)
-- **Tech/Note footers**: Include a small "Tech:" or "Note:" line after bullet points where relevant, with slight spacing above
-- **Two-page target**: Aim to fill both pages without spilling to a third
-- **Footer attribution**: Include a small footer linking to this GitHub repo, explaining the CV was generated with Claude Code
-
-### Structure
-- **Baseline CVs**: Store reusable templates in `private/generated/baseline/`
-- **Application CVs**: Store job-specific CVs in `private/generated/applications/`
-- **Naming convention**: `[target-role]-[context]` for baseline, `[company]-[role]-[date]` for applications
-- **Privacy**: All personal content lives in the `private/` submodule (separate private repo)
+Personal CV style preferences (tone, formatting, structure) should be stored in `private/CLAUDE.md`. This keeps the public repo generic while allowing customization in the private submodule.

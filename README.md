@@ -49,6 +49,7 @@ cvmake/
 │       └── standard.tex        # Cover letter template
 │
 └── private/                     # Git submodule (private repo)
+    ├── CLAUDE.md                # Personal CV style preferences
     ├── config/                  # Personal configuration
     │   ├── personal-info.yaml  # Contact details, links
     │   └── preferences.yaml    # CV generation preferences
@@ -72,43 +73,48 @@ cvmake/
 
 ## Getting Started
 
-### For the Author (with existing private submodule)
+### 1. Fork this repo
+
+Fork to get the public framework (templates, CLAUDE.md instructions).
+
+### 2. Create your private content repo
+
+Create a **private** repo on GitHub (e.g., `yourname/cvmake-private`) to store your personal data.
+
+### 3. Set up the submodule
 
 ```bash
-# Clone with submodule
-git clone --recurse-submodules git@github.com:steromano/cvmake.git
+# Clone your fork
+git clone git@github.com:yourname/cvmake.git
 cd cvmake
 
-# Or if already cloned without submodule:
-git submodule update --init
+# Remove the existing submodule reference (points to original author's private repo)
+git submodule deinit -f private
+git rm -f private
+rm -rf .git/modules/private
+
+# Add your own private repo as a submodule
+git submodule add git@github.com:yourname/cvmake-private.git private
+
+# Set up the folder structure in your private repo
+cd private
+mkdir -p config experience generated/baseline generated/applications manual
+touch config/personal-info.yaml config/preferences.yaml
+touch experience/professional-history.md experience/education.md experience/skills.md
+git add . && git commit -m "Initial structure" && git push
+
+# Commit the submodule change to your fork
+cd ..
+git add . && git commit -m "Link to my private repo" && git push
 ```
 
-### For Others (fork and create your own private repo)
+### 4. Populate your personal content
 
-1. **Fork this repo** to get the public framework
-
-2. **Create your own private repo** for personal content:
-   ```bash
-   # Create a new private repo on GitHub (e.g., yourname/cvmake-private)
-   # Then set it up locally:
-   mkdir private
-   cd private
-   git init
-   mkdir -p config experience generated/baseline generated/applications
-   git remote add origin git@github.com:yourname/cvmake-private.git
-   ```
-
-3. **Add it as a submodule** in your forked cvmake:
-   ```bash
-   cd ..  # back to cvmake root
-   rm -rf private  # remove the empty folder
-   git submodule add git@github.com:yourname/cvmake-private.git private
-   ```
-
-4. **Populate your personal content** in `private/`:
-   - `config/personal-info.yaml` - your contact details
-   - `experience/professional-history.md` - your work history (use Claude to help!)
-   - `generated/` - where your CVs will be stored
+In `private/`:
+- `config/personal-info.yaml` - your contact details
+- `experience/professional-history.md` - your work history (use Claude to interview you!)
+- `CLAUDE.md` - your personal CV style preferences (optional)
+- `generated/` - where your CVs will be stored
 
 ## Usage
 
@@ -256,5 +262,3 @@ If local LaTeX is problematic:
 ## License
 
 MIT License - Feel free to fork and adapt for your own use.
-
-Note: The `experience/` folder in this repo contains the author's actual professional history. If you fork this project, replace it with your own.
