@@ -54,7 +54,7 @@ cvmake/
     ├── generated/               # Generated CVs and cover letters
     │   ├── baseline/            # Reusable baseline CVs by role type
     │   └── applications/        # Job-specific CVs
-    └── manual/                  # Reference materials
+    └── seed/                    # Original pre-project resume (optional)
 ```
 
 The `private/` folder is a git submodule pointing to a separate private repository. This keeps your personal data private while the project framework remains public.
@@ -89,7 +89,7 @@ git submodule add git@github.com:yourname/cvmake-private.git private
 
 # Set up the folder structure
 cd private
-mkdir -p experience generated/baseline generated/applications manual
+mkdir -p experience generated/baseline generated/applications seed
 touch experience/professional-history.md
 git add . && git commit -m "Initial structure" && git push
 
